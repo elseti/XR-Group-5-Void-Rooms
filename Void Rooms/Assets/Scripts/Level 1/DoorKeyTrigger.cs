@@ -18,12 +18,18 @@ public class DoorKeyTrigger : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-        print("entered trigger");
+        print("entered door trigger");
         if (GameManager.instance.GetKeyGrabbed())
         {
+            // TODO - sound of key unlocking?
             print("door unlocked");
-            this.gameObject.SetActive(false);
+            this.gameObject.GetComponent<Animator>().Play("Door Open");
         }
-        
     }
+    
+    public void PlayDoorOpenSFX()
+    {
+        GameManager.instance.PlaySFX("doorCreak");
+    }
+
 }
