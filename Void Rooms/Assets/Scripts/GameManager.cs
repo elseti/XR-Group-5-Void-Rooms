@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
     private AudioLoader audioLoader;
     public AudioSource bgmAudio;
     public AudioSource sfxAudio;
+    public AudioSource footstepsAudio;
     
     // Level 1
     private bool keyGrabbed;
@@ -58,6 +59,16 @@ public class GameManager : Singleton<GameManager>
     public void StopSFX()
     {
         sfxAudio.Stop();
+    }
+
+    public void PlayFootsteps()
+    {
+        footstepsAudio.Play();
+    }
+
+    public void StopFootsteps()
+    {
+        footstepsAudio.Stop();
     }
     
     // Level 1 Methods

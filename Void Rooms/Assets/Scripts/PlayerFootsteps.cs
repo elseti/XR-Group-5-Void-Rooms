@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerFootsteps : MonoBehaviour
 {
     public GameObject xrController;
     private Vector3 lastControllerPosition;
+    private bool footstepsPlaying;
 
     private void Start()
     {
@@ -21,14 +23,19 @@ public class PlayerFootsteps : MonoBehaviour
         if (movementDelta > 0.01f) // Adjust the threshold as needed
         {
             // The player is moving
-            Debug.Log("Player is moving");
-            GameManager.instance.PlaySFX("playerFootsteps");
+            if (!footstepsPlaying)
+            {
+                GameManager.instance.PlayFootsteps();
+                footstepsPlaying = true;
+            }
         }
         else
         {
-            // The player is not moving
-            Debug.Log("Player is not moving");
-            GameManager.instance.StopSFX();
+            if (footstepsPlaying)
+            {
+                footstepsPlaying = false;
+                GameManager.instance.StopFootsteps();
+            }
         }
 
         lastControllerPosition = currentControllerPosition;
