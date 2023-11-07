@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -21,7 +22,15 @@ public class GameManager : Singleton<GameManager>
         
     }
     
-    // Audio Loader functions
+    // General functions
+    public void LoadScene(string sceneName)
+    {
+        
+        // TODO- fade out (alter gaze vignette?)
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+    }
+    
+    // Audio functions
     public void PlayBGM(string audioName){
         AudioClip ac = audioLoader.GetBGM(audioName);
         if(ac != null){
@@ -63,6 +72,8 @@ public class GameManager : Singleton<GameManager>
         return keyGrabbed;
     }
 
+    
+    
     
     
 }
