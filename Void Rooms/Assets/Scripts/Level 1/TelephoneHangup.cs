@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TelephoneHangup : MonoBehaviour
+public class TelephoneHangup : IInteractable
 {
     void Start()
     {
@@ -24,19 +24,12 @@ public class TelephoneHangup : MonoBehaviour
     {
         GameManager.instance.StopSFX();
     }
-
-    public void OnHoverEnter()
-    {
-        this.gameObject.GetComponent<Outline>().enabled = true;
-    }
-    public void OnHoverExit()
-    {
-        this.gameObject.GetComponent<Outline>().enabled = true;
-    }
-
+    
     public void OnSelectEnter()
     {
         // this.gameObject.GetComponent<Outline>().enabled = false;
+        // play some wrong sound OR game over
+        // GameManager.instance.PlaySFX("doorCreak");
     }
     
     public void OnSelectExit()
