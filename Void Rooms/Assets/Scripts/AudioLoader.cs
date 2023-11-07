@@ -8,6 +8,8 @@ public class AudioLoader : MonoBehaviour
 
     // SFX
     private AudioClip doorCreak;
+    private AudioClip phoneHangup;
+    private AudioClip phoneDial;
 
     void Awake(){
         // BGM
@@ -15,6 +17,9 @@ public class AudioLoader : MonoBehaviour
 
         // SFX
         doorCreak = Resources.Load<AudioClip>("Audio/Level 1/Door/squeaky-door-open-113212");
+        phoneHangup = Resources.Load<AudioClip>("Audio/Level 1/Phone/hang-up-tone-103906");
+        phoneDial = Resources.Load<AudioClip>("Audio/Level 1/Phone/phone-outgoing-call-72202");
+
     }
 
     public AudioClip GetBGM(string audioName){
@@ -31,6 +36,12 @@ public class AudioLoader : MonoBehaviour
         switch(audioName){
             case "doorCreak":
                 return doorCreak;
+            
+            case "phoneHangup":
+                return phoneHangup;
+            
+            case "phoneDial":
+                return phoneDial;
             
             default:
                 return null;

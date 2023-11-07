@@ -45,6 +45,11 @@ public class GameManager : Singleton<GameManager>
             print("ERROR: SFX file " + audioName + " not found!");
         }
     }
+
+    public void StopSFX()
+    {
+        sfxAudio.Stop();
+    }
     
     // Level 1 Methods
     public void SetKeyGrabbed(bool grabbed)
