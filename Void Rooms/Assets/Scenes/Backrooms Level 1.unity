@@ -26658,6 +26658,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1362045865}
     m_Modifications:
+    - target: {fileID: -5831492941544541889, guid: 2945ee05d21776c4ea20337d39044807, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2213082196249107394, guid: 2945ee05d21776c4ea20337d39044807, type: 3}
       propertyPath: m_Name
       value: WallDoor_B
@@ -26668,7 +26672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4339445941075570389, guid: 2945ee05d21776c4ea20337d39044807, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.41996846
+      value: 0.49732667
       objectReference: {fileID: 0}
     - target: {fileID: 4339445941075570389, guid: 2945ee05d21776c4ea20337d39044807, type: 3}
       propertyPath: m_LocalScale.z
@@ -26680,7 +26684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4339445941075570389, guid: 2945ee05d21776c4ea20337d39044807, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5629
+      value: 1.4178
       objectReference: {fileID: 0}
     - target: {fileID: 4339445941075570389, guid: 2945ee05d21776c4ea20337d39044807, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31240,8 +31244,8 @@ Transform:
   m_GameObject: {fileID: 1546865405751406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0.5611, y: 14.433, z: -6.1778}
-  m_LocalScale: {x: 0.3320596, y: 0.3514028, z: 0.40403333}
+  m_LocalPosition: {x: 0.5611, y: 14.469, z: -6.1778}
+  m_LocalScale: {x: 0.3320596, y: 0.3883001, z: 0.40403333}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4716470877401578}
