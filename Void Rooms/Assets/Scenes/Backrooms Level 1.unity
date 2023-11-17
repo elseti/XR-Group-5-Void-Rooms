@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.1341472, b: 0.121078566, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8860,6 +8860,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6259098446915402290, guid: af6f0dd985c4f694eb989eb58bb1bc93, type: 3}
   m_PrefabInstance: {fileID: 572652944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &588918152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 469666986585102038, guid: d3361b4eca1ce497f8bbc9da4576177a, type: 3}
+  m_PrefabInstance: {fileID: 1275773211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589388752
 GameObject:
   m_ObjectHideFlags: 0
@@ -9234,7 +9239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24151f3b6c1f8e244bfad341853cdefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xrController: {fileID: 1343871486}
+  xrController: {fileID: 588918152}
 --- !u!1001 &623743582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10761,6 +10766,18 @@ MonoBehaviour:
       - m_Target: {fileID: 622036281}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SetKeyGrabbed
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 750491095}
+        m_TargetAssemblyTypeName: KeyDropTest, Assembly-CSharp
+        m_MethodName: SetSelected
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15883,7 +15900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19939,11 +19956,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6259098446915402290, guid: af6f0dd985c4f694eb989eb58bb1bc93, type: 3}
   m_PrefabInstance: {fileID: 1336515448}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1343871486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8109361723919554912, guid: d3361b4eca1ce497f8bbc9da4576177a, type: 3}
-  m_PrefabInstance: {fileID: 1275773211}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1355926553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22806,7 +22818,7 @@ PrefabInstance:
       addedObject: {fileID: 1550196889}
     - targetCorrespondingSourceObject: {fileID: 1487994365157949523, guid: d98c793a3c8517144a0477b447235ad8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1550196892}
+      addedObject: {fileID: 1550196895}
   m_SourcePrefab: {fileID: 100100000, guid: d98c793a3c8517144a0477b447235ad8, type: 3}
 --- !u!4 &1550196885 stripped
 Transform:
@@ -22867,6 +22879,18 @@ MonoBehaviour:
       - m_Target: {fileID: 622036281}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SetKeyGrabbed
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1550196895}
+        m_TargetAssemblyTypeName: KeyDropTest, Assembly-CSharp
+        m_MethodName: SetSelected
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23033,16 +23057,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.117464125, y: 0.0067889853, z: 0.047423422}
   m_Center: {x: -0.0022880025, y: 0.00003244157, z: 0.0011062279}
---- !u!114 &1550196892
+--- !u!114 &1550196895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884248041}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2d6de24678df540ba42ca2b368ef19, type: 3}
+  m_Script: {fileID: 11500000, guid: de44c80a2a544f44daaa62d461f23220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1557736898
