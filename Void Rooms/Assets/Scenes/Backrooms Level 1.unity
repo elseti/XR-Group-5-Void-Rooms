@@ -2381,7 +2381,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5112,7 +5112,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8488,6 +8488,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 348317726534936664, guid: 29b641f3274cf4748a665a543dc07dfc, type: 3}
   m_PrefabInstance: {fileID: 561230257}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &561808332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8109361723919554912, guid: d3361b4eca1ce497f8bbc9da4576177a, type: 3}
+  m_PrefabInstance: {fileID: 1275773211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &562912236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8859,11 +8864,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6259098446915402290, guid: af6f0dd985c4f694eb989eb58bb1bc93, type: 3}
   m_PrefabInstance: {fileID: 572652944}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &588918152 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 469666986585102038, guid: d3361b4eca1ce497f8bbc9da4576177a, type: 3}
-  m_PrefabInstance: {fileID: 1275773211}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &589388752
 GameObject:
@@ -9239,7 +9239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24151f3b6c1f8e244bfad341853cdefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xrController: {fileID: 588918152}
+  xrController: {fileID: 561808332}
 --- !u!1001 &623743582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10700,7 +10700,7 @@ PrefabInstance:
       addedObject: {fileID: 750491089}
     - targetCorrespondingSourceObject: {fileID: 1487994365157949523, guid: d98c793a3c8517144a0477b447235ad8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 750491095}
+      addedObject: {fileID: 750491098}
   m_SourcePrefab: {fileID: 100100000, guid: d98c793a3c8517144a0477b447235ad8, type: 3}
 --- !u!4 &750491087 stripped
 Transform:
@@ -10775,8 +10775,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 750491095}
-        m_TargetAssemblyTypeName: KeyDropTest, Assembly-CSharp
+      - m_Target: {fileID: 750491098}
+        m_TargetAssemblyTypeName: KeyDrop, Assembly-CSharp
         m_MethodName: SetSelected
         m_Mode: 6
         m_Arguments:
@@ -10944,7 +10944,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.117464125, y: 0.0067889853, z: 0.047423422}
   m_Center: {x: -0.0022880025, y: 0.00003244157, z: 0.0011062279}
---- !u!114 &750491095
+--- !u!114 &750491098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
