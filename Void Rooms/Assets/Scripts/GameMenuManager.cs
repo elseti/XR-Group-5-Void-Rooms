@@ -9,8 +9,7 @@ public class GameMenuManager : MonoBehaviour
     public GameObject movement;
     public InputActionProperty showButton;
     public Transform head;
-    public float spawnDistance = 2;
-    public bool pause = true;
+    public float spawnDistance = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,28 +23,18 @@ public class GameMenuManager : MonoBehaviour
     {
         if(showButton.action.WasPressedThisFrame())
         {
-            menu.SetActive(!menu.activeSelf);
-
+            movement.SetActive(false);
+            menu.SetActive(true);
             menu.transform.position = head.position + new Vector3(head.forward.x,0,head.forward.z).normalized * spawnDistance;
-
-            pause = !pause;
-
-
-            if(pause)
-            {
-                movement.SetActive(false);
-
-            }
-            else
-            {
-                movement.SetActive(true);
-
-            }
-
-            
-
+        
         }
 
         menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
+    }
+
+    public void startGame()
+    {
+         movement.SetActive(true);
+         menu.SetActive(false);    
     }
 }

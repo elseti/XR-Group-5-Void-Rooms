@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - 'Interactables '
   - Ground
+  - GameMenuController
   layers:
   - Default
   - TransparentFX
