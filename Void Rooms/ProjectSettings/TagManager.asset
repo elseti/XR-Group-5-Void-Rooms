@@ -9,6 +9,7 @@ TagManager:
   - 'Interactables '
   - Ground
   - GameMenuController
+  - Weapon
   layers:
   - Default
   - TransparentFX
