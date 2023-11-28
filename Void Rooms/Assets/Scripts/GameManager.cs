@@ -40,6 +40,25 @@ public class GameManager : Singleton<GameManager>
     }
     
     // Audio functions
+    
+    // To return audio clip
+    public AudioClip GetBGM(string audioName)
+    {
+        AudioClip ac = audioLoader.GetBGM(audioName);
+        if (ac != null) return ac;
+        print("ERROR: BGM file \" + audioName + \" not found!");
+        return null;
+    }
+    
+    public AudioClip GetSFX(string audioName)
+    {
+        AudioClip ac = audioLoader.GetSFX(audioName);
+        if (ac != null) return ac;
+        print("ERROR: SFX file \" + audioName + \" not found!");
+        return null;
+    }
+    
+    // To play audio clip directly
     public void PlayBGM(string audioName){
         AudioClip ac = audioLoader.GetBGM(audioName);
         if(ac != null){
