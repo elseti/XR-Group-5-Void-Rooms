@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -7,11 +9,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class PlayerFootsteps : MonoBehaviour
 {
     public GameObject xrController;
+    public bool onWater; 
+    
     private Vector3 lastControllerPosition;
     private bool footstepsPlaying;
-
+    
     private void Start()
     {
+        onWater = false;
         lastControllerPosition = xrController.transform.position;
     }
 
@@ -25,7 +30,7 @@ public class PlayerFootsteps : MonoBehaviour
             // The player is moving
             if (!footstepsPlaying)
             {
-                GameManager.instance.PlayFootsteps();
+                GameManager.instance.PlayFootsteps(onWater);
                 footstepsPlaying = true;
             }
         }
@@ -40,5 +45,6 @@ public class PlayerFootsteps : MonoBehaviour
 
         lastControllerPosition = currentControllerPosition;
     }
+
 }
 

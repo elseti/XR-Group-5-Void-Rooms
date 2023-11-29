@@ -12,7 +12,10 @@ public class AudioLoader : MonoBehaviour
     private AudioClip phoneHangup;
     private AudioClip phoneDial;
     private AudioClip playerFootsteps;
+    private AudioClip waterFootsteps;
+    
     private AudioClip keyDrop;
+    
     private AudioClip pianoC;
     private AudioClip pianoCSharp;
     private AudioClip pianoD;
@@ -43,6 +46,7 @@ public class AudioLoader : MonoBehaviour
         phoneHangup = Resources.Load<AudioClip>("Audio/Level 1/Phone/hang-up-tone-103906");
         phoneDial = Resources.Load<AudioClip>("Audio/Level 1/Phone/phone-outgoing-call-72202");
         playerFootsteps = Resources.Load<AudioClip>("Audio/Footsteps/indoor-footsteps-6385");
+        waterFootsteps = Resources.Load<AudioClip>("Audio/Footsteps/footsteps-in-water-nature-sounds-8185");
         keyDrop = Resources.Load<AudioClip>("Audio/Level 1/Door/key drop on carpet edit");
         
         // Piano SFX
@@ -95,6 +99,9 @@ public class AudioLoader : MonoBehaviour
 
             case "playerFootsteps":
                 return playerFootsteps;
+            
+            case "waterFootsteps":
+                return waterFootsteps;
 
             case "keyDrop":
                 return keyDrop;
@@ -121,7 +128,7 @@ public class AudioLoader : MonoBehaviour
                 return pianoFSharp; 
             
             case "pianoG":
-                return pianoGSharp;
+                return pianoG;
             
             case "pianoG#":
                 return pianoGSharp; 

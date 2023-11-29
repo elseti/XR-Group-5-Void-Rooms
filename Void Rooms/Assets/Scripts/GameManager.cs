@@ -52,10 +52,10 @@ public class GameManager : Singleton<GameManager>
     
     public AudioClip GetSFX(string audioName)
     {
-        AudioClip ac = audioLoader.GetSFX(audioName);
-        if (ac != null) return ac;
-        print("ERROR: SFX file \" + audioName + \" not found!");
-        return null;
+        return audioLoader.GetSFX(audioName);
+        // if (ac != null) return ac;
+        // print("ERROR: SFX file \" + audioName + \" not found!");
+        // return null;
     }
     
     // To play audio clip directly
@@ -88,9 +88,19 @@ public class GameManager : Singleton<GameManager>
         sfxAudio.Stop();
     }
 
-    public void PlayFootsteps()
+    public void PlayFootsteps(bool water)
     {
-        footstepsAudio.Play();
+        if(!water)
+        {
+            print("player foot");
+            footstepsAudio.PlayOneShot(GetSFX("playerFootsteps"));
+        }
+        else
+        {
+            print("water foot");
+            footstepsAudio.PlayOneShot(GetSFX("waterFootsteps"));
+        }
+        
     }
 
     public void StopFootsteps()
