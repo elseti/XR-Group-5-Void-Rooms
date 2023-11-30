@@ -30,6 +30,10 @@ public class AudioLoader : MonoBehaviour
     private AudioClip pianoB;
     private AudioClip pianoCHigh;
 
+    private AudioClip portalEnter;
+    private AudioClip weaponFall;
+    private AudioClip paperGrab;
+    
     void Awake()
     {
         // BGM
@@ -63,7 +67,11 @@ public class AudioLoader : MonoBehaviour
         pianoASharp = Resources.Load<AudioClip>("Audio/Level 2/Piano/Basic Notes/a#");
         pianoB = Resources.Load<AudioClip>("Audio/Level 2/Piano/Basic Notes/b");
         pianoCHigh = Resources.Load<AudioClip>("Audio/Level 2/Piano/Basic Notes/c6");
-
+        
+        // Level 2 misc
+        portalEnter = Resources.Load<AudioClip>("Audio/Level 2/portal open");
+        weaponFall = Resources.Load<AudioClip>("Audio/Level 2/axe fall");
+        paperGrab = Resources.Load<AudioClip>("Audio/Level 2/paper grab");
     }
 
     public AudioClip GetBGM(string audioName)
@@ -144,6 +152,15 @@ public class AudioLoader : MonoBehaviour
             
             case "pianoCHigh":
                 return pianoCHigh;
+            
+            case "portalEnter":
+                return portalEnter;
+            
+            case "weaponFall":
+                return weaponFall;
+            
+            case "paperGrab":
+                return paperGrab;
             
             default:
                 return null;

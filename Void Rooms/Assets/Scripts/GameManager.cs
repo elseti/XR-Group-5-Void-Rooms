@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
@@ -14,13 +15,15 @@ public class GameManager : Singleton<GameManager>
     private bool doorUnlocked;
     
     // Level 2
+    public UnityEvent portalOpened;
     private bool balloonBroken1;
     private bool balloonBroken2;
     private bool balloonBroken3;
     private bool balloonBroken4;
     private bool balloonBroken5;
     private bool balloonBroken6;
-
+   
+    
     void Start()
     {
         audioLoader = GetComponent<AudioLoader>();
@@ -169,7 +172,12 @@ public class GameManager : Singleton<GameManager>
         print("INVALID BALLOON NUMBER");
         return false;
     }
-
+    
+    // open portal to gameover / next scene if piano is solved
+    // public void OpenPortal()
+    // {
+    //     portalOpened.Invoke();
+    // }
     
     
     

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,6 +38,7 @@ public class PianoManager : Singleton<PianoManager>
                     GameManager.instance.PlaySFX("doorCreak");
                     print("piano is solved!");
                     isSolved = true;
+                    GameManager.instance.portalOpened.Invoke();
                 }
             }
             else

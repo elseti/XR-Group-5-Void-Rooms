@@ -17,5 +17,9 @@ namespace Level_2.Piano_Keys
             audioSource.PlayOneShot(GameManager.instance.GetSFX("pianoF"));
             PianoManager.instance.PressNote("f");
         }
+        public void OnSelectExit()
+        {
+            this.transform.parent.GetComponent<Animator>().Play("L2 Piano None");
+        }
     }
 }
