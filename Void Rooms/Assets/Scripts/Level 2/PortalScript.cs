@@ -17,9 +17,9 @@ namespace Level_2
 
         private void OpenPortal()
         {
+            portal.SetActive(true);
             portalOpened = true;
             this.gameObject.GetComponent<AudioSource>().PlayOneShot(portalLoopBGM);
-            portal.SetActive(true);
         }
 
         private void OnTriggerEnter(Collider col)

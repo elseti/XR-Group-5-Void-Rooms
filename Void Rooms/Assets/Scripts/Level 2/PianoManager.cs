@@ -23,7 +23,8 @@ public class PianoManager : Singleton<PianoManager>
     {
         
     }
-
+    
+    // Check if sequence is correct
     public void PressNote(string s)
     {
         s = s.ToLower();
@@ -34,8 +35,6 @@ public class PianoManager : Singleton<PianoManager>
                 currIndex++;
                 if (currIndex == correctSequence.Length)
                 {
-                    // placeholder to debug
-                    GameManager.instance.PlaySFX("doorCreak");
                     print("piano is solved!");
                     isSolved = true;
                     GameManager.instance.portalOpened.Invoke();

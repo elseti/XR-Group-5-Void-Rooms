@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class IInteractable : MonoBehaviour
 {
-    public void OnHoverEnter()
+    public virtual void OnHoverEnter()
     {
         this.gameObject.GetComponent<Outline>().enabled = true;
     }
 
-    public void OnHoverExit()
+    public virtual void OnHoverExit()
     {
         this.gameObject.GetComponent<Outline>().enabled = false;
     }

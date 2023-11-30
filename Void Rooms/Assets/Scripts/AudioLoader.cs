@@ -33,6 +33,9 @@ public class AudioLoader : MonoBehaviour
     private AudioClip portalEnter;
     private AudioClip weaponFall;
     private AudioClip paperGrab;
+    private AudioClip paperFall;
+    private AudioClip weaponWaterFall;
+    private AudioClip paperWaterFall;
     
     void Awake()
     {
@@ -72,6 +75,9 @@ public class AudioLoader : MonoBehaviour
         portalEnter = Resources.Load<AudioClip>("Audio/Level 2/portal open");
         weaponFall = Resources.Load<AudioClip>("Audio/Level 2/axe fall");
         paperGrab = Resources.Load<AudioClip>("Audio/Level 2/paper grab");
+        paperFall = Resources.Load<AudioClip>("Audio/Level 2/paper fall");
+        weaponWaterFall = Resources.Load<AudioClip>("Audio/Level 2/weapon water fall");
+        paperWaterFall = Resources.Load<AudioClip>("Audio/Level 2/paper water fall");
     }
 
     public AudioClip GetBGM(string audioName)
@@ -161,6 +167,15 @@ public class AudioLoader : MonoBehaviour
             
             case "paperGrab":
                 return paperGrab;
+            
+            case "paperFall":
+                return paperFall;
+            
+            case "weaponWaterFall":
+                return weaponWaterFall;
+            
+            case "paperWaterFall":
+                return paperWaterFall;
             
             default:
                 return null;

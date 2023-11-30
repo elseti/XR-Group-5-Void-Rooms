@@ -1,8 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class KnifeInteractable : IInteractable
+namespace Level_2
 {
+    public class KnifeInteractable : IInteractable
+    {
+        private bool isSelected;
 
+        public void OnSelectEnter()
+        {
+            isSelected = true;
+        }
+        private void OnCollisionEnter(Collision col)
+        {
+            if (isSelected)
+            {
+                if (col.gameObject.CompareTag("Ground"))
+                {
+                    GameManager.instance.PlaySFX("weaponFall");
+                    isSelected = false;
+                }
+                else if (col.gameObject.CompareTag("WaterGround"))
+                {
+                    GameManager.instance.PlaySFX("weaponWaterFall");
+                    isSelected = false;
+                }
+            }
+        }
+    }
 }
