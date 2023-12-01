@@ -6,26 +6,30 @@ using UnityEngine.InputSystem;
 public class GameMenuManager : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject startMenu;
     public GameObject movement;
     public InputActionProperty showButton;
     public Transform head;
-    public float spawnDistance = 1;
+    public float spawnDistance = 3;
+    private bool paused = false;
+    private bool gameStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
         movement.SetActive(false);
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(showButton.action.WasPressedThisFrame())
+
+        if(showButton.action.WasPressedThisFrame() && gameStarted) 
         {
-            movement.SetActive(false);
-            menu.SetActive(true);
+            movement.SetActive(paused);
+            menu.SetActive(!paused);
             menu.transform.position = head.position + new Vector3(head.forward.x,0,head.forward.z).normalized * spawnDistance;
+            paused = !paused;
         
         }
 
@@ -34,7 +38,8 @@ public class GameMenuManager : MonoBehaviour
 
     public void startGame()
     {
-         movement.SetActive(true);
-         menu.SetActive(false);    
+        startMenu.SetActive(false);
+        movement.SetActive(true);
+        gameStarted = true;
     }
 }
