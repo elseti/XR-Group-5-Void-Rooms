@@ -7,8 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+
+    GameMenuManager menuManager;
+
     void Start()
     {
+        menuManager = GameObject.FindGameObjectWithTag("GameMenuController").GetComponent<GameMenuManager>();
 
     }
 
@@ -28,6 +32,9 @@ public class LoadScene : MonoBehaviour
         Application.Quit();
     }
 
-
+    public void StartGame()
+    {
+        menuManager.startGame();
+    }
 
 }
