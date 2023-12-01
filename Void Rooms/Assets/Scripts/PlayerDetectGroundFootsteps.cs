@@ -6,7 +6,6 @@ namespace DefaultNamespace
     {
         private void OnTriggerEnter(Collider col)
         {
-            print("on trigger");
             if (col.gameObject.CompareTag("Ground"))
             {
                 print("on ground PlayerDetectGroundFootsteps");
@@ -14,7 +13,7 @@ namespace DefaultNamespace
             }
             else if(col.gameObject.CompareTag("Water"))
             {
-                print("water PlayerDetectGroundFootsteps");
+                print("on water PlayerDetectGroundFootsteps");
                 GameManager.instance.gameObject.GetComponent<PlayerFootsteps>().onWater = true;
             }
         }
