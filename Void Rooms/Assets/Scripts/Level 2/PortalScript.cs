@@ -27,7 +27,7 @@ namespace Level_2
             if (col.CompareTag("Player") && portalOpened)
             {
                 GameManager.instance.PlaySFX("portalEnter");
-                // SceneManager.LoadScene("Game Over");
+                SceneManager.LoadScene("Backrooms GameOver");
             }
             
         }
