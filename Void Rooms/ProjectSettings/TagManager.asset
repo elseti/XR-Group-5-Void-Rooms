@@ -10,6 +10,8 @@ TagManager:
   - Ground
   - GameMenuController
   - Weapon
+  - Water
+  - WaterGround
   layers:
   - Default
   - TransparentFX
