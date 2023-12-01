@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
@@ -15,15 +14,13 @@ public class GameManager : Singleton<GameManager>
     private bool doorUnlocked;
     
     // Level 2
-    public UnityEvent portalOpened;
     private bool balloonBroken1;
     private bool balloonBroken2;
     private bool balloonBroken3;
     private bool balloonBroken4;
     private bool balloonBroken5;
     private bool balloonBroken6;
-   
-    
+
     void Start()
     {
         audioLoader = GetComponent<AudioLoader>();
@@ -43,25 +40,6 @@ public class GameManager : Singleton<GameManager>
     }
     
     // Audio functions
-    
-    // To return audio clip
-    public AudioClip GetBGM(string audioName)
-    {
-        AudioClip ac = audioLoader.GetBGM(audioName);
-        if (ac != null) return ac;
-        print("ERROR: BGM file \" + audioName + \" not found!");
-        return null;
-    }
-    
-    public AudioClip GetSFX(string audioName)
-    {
-        return audioLoader.GetSFX(audioName);
-        // if (ac != null) return ac;
-        // print("ERROR: SFX file \" + audioName + \" not found!");
-        // return null;
-    }
-    
-    // To play audio clip directly
     public void PlayBGM(string audioName){
         AudioClip ac = audioLoader.GetBGM(audioName);
         if(ac != null){
@@ -91,19 +69,9 @@ public class GameManager : Singleton<GameManager>
         sfxAudio.Stop();
     }
 
-    public void PlayFootsteps(bool water)
+    public void PlayFootsteps()
     {
-        if(!water)
-        {
-            print("player foot");
-            footstepsAudio.PlayOneShot(GetSFX("playerFootsteps"));
-        }
-        else
-        {
-            print("water foot");
-            footstepsAudio.PlayOneShot(GetSFX("waterFootsteps"));
-        }
-        
+        footstepsAudio.Play();
     }
 
     public void StopFootsteps()
@@ -172,12 +140,7 @@ public class GameManager : Singleton<GameManager>
         print("INVALID BALLOON NUMBER");
         return false;
     }
-    
-    // open portal to gameover / next scene if piano is solved
-    // public void OpenPortal()
-    // {
-    //     portalOpened.Invoke();
-    // }
+
     
     
     

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BalloonScript : IInteractable
@@ -9,7 +8,6 @@ public class BalloonScript : IInteractable
     public int balloonNo;
     public GameObject balloonNormal;
     public GameObject balloonBroken;
-    public GameObject musicNotePaper;
 
     public AudioSource sfxSource;
     public AudioClip popSfx;
@@ -33,7 +31,6 @@ public class BalloonScript : IInteractable
         {
             balloonNormal.SetActive(false);
             balloonBroken.SetActive(true);
-            musicNotePaper.SetActive(true);
             GameManager.instance.SetBalloonBroken(balloonNo);
             sfxSource.PlayOneShot(popSfx);
             isBroken = true;
