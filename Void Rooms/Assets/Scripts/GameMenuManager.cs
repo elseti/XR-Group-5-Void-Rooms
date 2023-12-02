@@ -7,10 +7,11 @@ public class GameMenuManager : MonoBehaviour
 {
     public GameObject menu;
     public GameObject startMenu;
+    public GameObject finalMenu;
     public GameObject movement;
     public InputActionProperty showButton;
     public Transform head;
-    public float spawnDistance = 2;
+    public float spawnDistance = 3;
     private bool isPaused = false;
     private bool isStarted = false;
 
@@ -18,7 +19,7 @@ public class GameMenuManager : MonoBehaviour
     void Start()
     {
         
-        movement.SetActive(false);
+        //movement.SetActive(false);
         
     }
 
@@ -41,5 +42,10 @@ public class GameMenuManager : MonoBehaviour
          movement.SetActive(true);
          startMenu.SetActive(false);    
          isStarted = true;
+    }
+
+    public void selectedCorrect()
+    {
+        finalMenu.SetActive(true);
     }
 }

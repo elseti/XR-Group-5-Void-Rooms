@@ -10,21 +10,16 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void GoToScene(int sceneIndex)
     {
-    StartCoroutine(GoToSceneRoutine(sceneIndex));
+        StartCoroutine(GoToSceneRoutine(sceneIndex));
     }
 
     IEnumerator GoToSceneRoutine(int sceneIndex)
     {
-    fadeScreen.FadeOut();
-    yield return new WaitForSeconds(fadeScreen.fadeDuration);
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
  
-    SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
 
    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
