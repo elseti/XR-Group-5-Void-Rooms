@@ -5,6 +5,7 @@ using UnityEngine;
 public class PianoManager : Singleton<PianoManager>
 {
     public string[] correctSequence;
+    public GameObject magicCircle;
     private int currIndex = 0;
     private bool isSolved = false;
     
@@ -38,6 +39,7 @@ public class PianoManager : Singleton<PianoManager>
                     print("piano is solved!");
                     isSolved = true;
                     GameManager.instance.portalOpened.Invoke();
+                    magicCircle.SetActive(true);
                 }
             }
             else
