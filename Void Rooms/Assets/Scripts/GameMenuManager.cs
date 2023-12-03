@@ -8,6 +8,7 @@ public class GameMenuManager : MonoBehaviour
     public GameObject menu;
     public GameObject startMenu;
     public GameObject finalMenu;
+    public GameObject transitionMenu;
     public GameObject movement;
     public InputActionProperty showButton;
     public Transform head;
@@ -47,5 +48,11 @@ public class GameMenuManager : MonoBehaviour
     public void selectedCorrect()
     {
         finalMenu.SetActive(true);
+    }
+
+    public void preTransition()
+    {
+        finalMenu.SetActive(false);
+        transitionMenu.SetActive(true);
     }
 }

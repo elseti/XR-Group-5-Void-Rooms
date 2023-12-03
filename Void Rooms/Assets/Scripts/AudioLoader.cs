@@ -13,6 +13,7 @@ public class AudioLoader : MonoBehaviour
     private AudioClip phoneDial;
     private AudioClip playerFootsteps;
     private AudioClip keyDrop;
+    private AudioClip switchPress;
 
     void Awake()
     {
@@ -31,6 +32,7 @@ public class AudioLoader : MonoBehaviour
         phoneDial = Resources.Load<AudioClip>("Audio/Level 1/Phone/phone-outgoing-call-72202");
         playerFootsteps = Resources.Load<AudioClip>("Audio/Footsteps/indoor-footsteps-6385");
         keyDrop = Resources.Load<AudioClip>("Audio/Level 1/Door/key drop on carpet edit");
+        switchPress = Resources.Load<AudioClip>("Audio/Level 1/Switch/switchPress");
 
     }
 
@@ -70,6 +72,9 @@ public class AudioLoader : MonoBehaviour
 
             case "keyDrop":
                 return keyDrop;
+
+            case "switchPress":
+                return switchPress;
 
             default:
                 return null;
