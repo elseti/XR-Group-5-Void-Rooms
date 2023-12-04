@@ -8,16 +8,21 @@ public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
 
+    private bool fadeStarted = false;
+
     public void GoToScene(int sceneIndex)
     {
+        if (!fadeStarted)
+        {
         StartCoroutine(GoToSceneRoutine(sceneIndex));
+        }
     }
 
     IEnumerator GoToSceneRoutine(int sceneIndex)
-    {
+    {   
+        fadeStarted = true;
         fadeScreen.FadeOut();
         yield return new WaitForSeconds(fadeScreen.fadeDuration);
- 
         SceneManager.LoadScene(sceneIndex);
 
    }

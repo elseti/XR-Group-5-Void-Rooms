@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameMenuManager : MonoBehaviour
 {
@@ -19,9 +20,19 @@ public class GameMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if(sceneName == "Backrooms Level 1")
+        {
+            movement.SetActive(false);
+        }
         
-        //movement.SetActive(false);
-        
+        else
+
+        {
+            isStarted = true;
+        }
     }
 
     // Update is called once per frame

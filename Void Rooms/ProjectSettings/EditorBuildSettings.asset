@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: b5e7171af77b54896bd65c4f3a796a21
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Backrooms Level 1.unity
     guid: 27ff3f95e3de347519edb9383197a87c
   - enabled: 1
