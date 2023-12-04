@@ -44,7 +44,7 @@ public class FadeScreen : MonoBehaviour
             Color newColor = fadeColor;
             newColor.a = Mathf.Lerp(alphaIn, alphaOut, timer/ fadeDuration);
             rend.material.SetColor("_Color", newColor);
-            timer += Time.deltaTime;
+            timer += (Time.deltaTime * 2);
             yield return null;
 
         }

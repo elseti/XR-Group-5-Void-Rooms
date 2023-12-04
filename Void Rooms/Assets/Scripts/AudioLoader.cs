@@ -13,6 +13,7 @@ public class AudioLoader : MonoBehaviour
     private AudioClip phoneDial;
     private AudioClip playerFootsteps;
     private AudioClip waterFootsteps;
+    private AudioClip switchPress;
     
     private AudioClip keyDrop;
     
@@ -54,7 +55,9 @@ public class AudioLoader : MonoBehaviour
         phoneDial = Resources.Load<AudioClip>("Audio/Level 1/Phone/phone-outgoing-call-72202");
         playerFootsteps = Resources.Load<AudioClip>("Audio/Footsteps/indoor-footsteps-6385");
         waterFootsteps = Resources.Load<AudioClip>("Audio/Footsteps/footsteps-in-water-nature-sounds-8185");
-        keyDrop = Resources.Load<AudioClip>("Audio/Level 1/Door/key drop on carpet edit");
+        keyDrop = Resources.Load<AudioClip>("Audio/Level 1/Door/key drop on carpet edit"); 
+        switchPress = Resources.Load<AudioClip>("Audio/Level 1/Switch/switchPress");
+
         
         // Piano SFX
         pianoC = Resources.Load<AudioClip>("Audio/Level 2/Piano/Basic Notes/c");
@@ -176,6 +179,9 @@ public class AudioLoader : MonoBehaviour
             
             case "paperWaterFall":
                 return paperWaterFall;
+
+            case "switchPress":
+                return switchPress;
             
             default:
                 return null;
