@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class TelephoneDial : IInteractable
 {
-    void Start()
-    {
-        
-    }
-    
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider col)
     {

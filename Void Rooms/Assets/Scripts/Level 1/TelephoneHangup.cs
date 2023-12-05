@@ -4,16 +4,7 @@ using UnityEngine;
 
 public class TelephoneHangup : IInteractable
 {
-    void Start()
-    {
-        
-    }
-    
-    void Update()
-    {
-        
-    }
-
+ 
     private void OnTriggerEnter(Collider col)
     {
         GameManager.instance.PlaySFX("phoneHangup");

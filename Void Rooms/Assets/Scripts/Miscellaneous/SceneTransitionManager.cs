@@ -7,23 +7,25 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
+    public GameObject gameManager;
 
     private bool fadeStarted = false;
 
-    public void GoToScene(int sceneIndex)
+    public void GoToScene(string sceneName)
     {
         if (!fadeStarted)
         {
-        StartCoroutine(GoToSceneRoutine(sceneIndex));
+        StartCoroutine(GoToSceneRoutine(sceneName));
         }
     }
 
-    IEnumerator GoToSceneRoutine(int sceneIndex)
+    IEnumerator GoToSceneRoutine(string sceneName)
     {   
         fadeStarted = true;
         fadeScreen.FadeOut();
         yield return new WaitForSeconds(fadeScreen.fadeDuration);
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(sceneName);
+        Destroy(gameManager);
 
    }
 

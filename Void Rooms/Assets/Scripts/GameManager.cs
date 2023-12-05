@@ -28,11 +28,6 @@ public class GameManager : Singleton<GameManager>
     {
         audioLoader = GetComponent<AudioLoader>();
     }
-
-    void Update()
-    {
-        
-    }
     
     // General functions
     public void LoadScene(string sceneName)
