@@ -7,6 +7,7 @@ namespace Level_2
     {
         public GameObject portal;
         public AudioClip portalLoopBGM;
+        public GameObject gameManager2;
 
         private bool portalOpened;
         private void Awake()
@@ -26,6 +27,7 @@ namespace Level_2
         {
             if (col.CompareTag("Player") && portalOpened)
             {
+                Destroy(gameManager2);
                 GameManager.instance.PlaySFX("portalEnter");
                 SceneManager.LoadScene("Backrooms GameOver");
             }

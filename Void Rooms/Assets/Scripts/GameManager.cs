@@ -88,7 +88,11 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayFootsteps(bool water)
     {
-        if(!water)
+        if (SceneManager.GetActiveScene().name == "Backrooms GameOver")
+        {
+            footstepsAudio.Play();
+        }
+        else if(!water)
         {
             print("player foot");
             footstepsAudio.clip = GetSFX("playerFootsteps");
