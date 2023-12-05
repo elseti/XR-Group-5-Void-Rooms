@@ -91,12 +91,14 @@ public class GameManager : Singleton<GameManager>
         if(!water)
         {
             print("player foot");
-            footstepsAudio.PlayOneShot(GetSFX("playerFootsteps"));
+            footstepsAudio.clip = GetSFX("playerFootsteps");
+            footstepsAudio.Play();
         }
         else
         {
             print("water foot");
-            footstepsAudio.PlayOneShot(GetSFX("waterFootsteps"));
+            footstepsAudio.clip = GetSFX("waterFootsteps");
+            footstepsAudio.Play();
         }
         
     }
